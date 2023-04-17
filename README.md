@@ -9,3 +9,6 @@ Useful for testing and very quick implementation. :^)
 <p>w - is the width</p>
 <p>h - is the height</p>
 <p>file_name - is the output name, add .bmp yourself or don't. :)</p>
+
+
+![:^)](https://raw.githubusercontent.com/Justlol1289304/print_rgb/main/readmeimg.png)

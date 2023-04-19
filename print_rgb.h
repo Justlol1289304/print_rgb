@@ -42,18 +42,16 @@ uint8_t _bmp_header[54]= {
 static const uint8_t _zero_pad[4];
 
 void print_rgb(void *data, uint32_t w, uint32_t h, char *file_name){
-	char bmp_name[MAX_IMAGE_NAME];
 	uint32_t w_pad = w%4, raw_bmp_size = w*(3*h + w_pad), bmp_size = raw_bmp_size + sizeof(_bmp_header);
 	if(strlen(file_name) > MAX_IMAGE_NAME){
 		fprintf(stderr, "Abort: image name is too large.\n");
 		abort();
 	}
-	strcpy(bmp_name, file_name);
 	memcpy(_bmp_header+HEAD_SIZE_OFF, &bmp_size, sizeof(uint32_t));
 	memcpy(_bmp_header+HEAD_WIDTH_OFF, &w, sizeof(uint32_t));
 	memcpy(_bmp_header+HEAD_HEIGHT_OFF, &h, sizeof(uint32_t));
 	memcpy(_bmp_header+HEAD_RAW_SIZE_OFF, &raw_bmp_size, sizeof(uint32_t));
-	FILE *bmp_file = fopen(bmp_name, "w+");
+	FILE *bmp_file = fopen(file_name, "w+");
 	if(!bmp_file){
 		fprintf(stderr, "Abort: failed to open file.\n");
 		abort();	

@@ -20,7 +20,6 @@ typedef struct{
 	uint8_t r,g,b;
 } rgb;
 
-
 uint8_t _bmp_header[54]= {
 	'B','M',	//signature
 	0,0,0,0,	//size total

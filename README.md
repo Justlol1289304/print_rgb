@@ -10,5 +10,5 @@ Useful for testing and very quick implementation. :^)
 <p>h - is the height</p>
 <p>file_name - is the output name, add .bmp yourself or don't. :)</p>
 
-
+Example usage:
 ![:^)](https://raw.githubusercontent.com/Justlol1289304/print_rgb/main/readmeimg.png)
